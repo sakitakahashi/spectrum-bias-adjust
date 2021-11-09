@@ -254,7 +254,7 @@ dat_sero_Manaus_AGG_2groups %>%
 		ylim(0,1) +
 		scale_fill_manual(values=c("2 groups"="deeppink3", "3 groups\n(AS as separate)"="aquamarine3")) +
 		scale_colour_manual(values=c("2 groups"="deeppink3", "3 groups\n(AS as separate)"="aquamarine3")) +
-		ylab("Adjusted seroprevalence") -> p_Manaus
+		ylab("Cumulative incidence") -> p_Manaus
 
 dat_sero_Manaus_AGG_2groups %>%
 	mutate(ratio = adj_sero_median/raw_prev, ratio_lb = adj_sero_lb/raw_prev, ratio_ub = adj_sero_ub/raw_prev) %>%
@@ -318,7 +318,7 @@ tmp_adj %>%
 		theme_bw() +
 		xlab("") +
 		scale_fill_manual("Value", values=c("Raw"="black", "Adjusted"="deeppink3")) +
-		ylab("Seroprevalence") +
+		ylab("Cumulative incidence") +
 		ggtitle("Japan") -> p_Japan
 
 ## Put it all together
