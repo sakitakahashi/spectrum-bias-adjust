@@ -30,7 +30,7 @@ dat_sero_Italy_2groups %>%
 		geom_hline(yintercept=1, col="black", linetype="dashed") +
 		theme_bw() +
 		xlab("Raw seroprevalence") +
-		ylab("Ratio, adjusted to raw seroprevalence") +
+		ylab("Ratio, cumulative incidence to raw seroprevalence") +
 		ggtitle("Italy") -> plot.Italy
 
 ## Spain
@@ -43,7 +43,7 @@ dat_sero_Spain_2groups %>%
 		geom_hline(yintercept=1, col="black", linetype="dashed") +
 		theme_bw() +
 		xlab("Raw seroprevalence") +
-		ylab("Ratio, adjusted to raw seroprevalence") +
+		ylab("Ratio, cumulative incidence to raw seroprevalence") +
 		ggtitle("Spain") +
 		facet_wrap(.~Round, ncol=1) -> plot.Spain
 
@@ -59,7 +59,7 @@ dat_sero_US_track_2groups %>%
 		geom_hline(yintercept=1, col="black", linetype="dashed") +
 		theme_bw() +
 		xlab("Raw seroprevalence") +
-		ylab("Ratio, adjusted to raw seroprevalence") +
+		ylab("Ratio, cumulative incidence to raw seroprevalence") +
 		ggtitle("United States") +
 		facet_wrap(.~`Census Division`, ncol=3, scales="free_x") +
 		scale_fill_brewer(palette="Spectral") +
@@ -75,7 +75,7 @@ dat_sero_Manaus_AGG_2groups %>%
 		geom_hline(yintercept=1, col="black", linetype="dashed") +
 		theme_bw() +
 		xlab("Raw seroprevalence") +
-		ylab("Ratio, adjusted to raw seroprevalence") +
+		ylab("Ratio, cumulative incidence to raw seroprevalence") +
 		ggtitle("Manaus, Brazil") +
 		theme(legend.position = c(0.8, 0.8)) +
 		guides(fill=guide_legend(title="Month", ncol=2)) +
@@ -138,7 +138,7 @@ dat_to_plot_Japan_2groups %>%
 		geom_hline(yintercept=1, col="black", linetype="dashed") +
 		theme_bw() +
 		xlab("Raw seroprevalence") +
-		ylab("Ratio, adjusted to raw seroprevalence") +
+		ylab("Ratio, cumulative incidence to raw seroprevalence") +
 		ggtitle("Japan") +
 		theme(legend.position = c(0.8, 0.8)) +
 		scale_fill_brewer(palette="Spectral") -> plot.Japan
